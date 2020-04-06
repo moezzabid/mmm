@@ -1,4 +1,4 @@
-package org.sid.CompteRenduu.web;
+package org.sid.compterendu.web;
 
 import org.sid.compterendu.dao.Chef_equipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;

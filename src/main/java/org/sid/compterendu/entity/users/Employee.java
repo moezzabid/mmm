@@ -28,8 +28,7 @@ import lombok.NoArgsConstructor;
 @Data @AllArgsConstructor @NoArgsConstructor
 public class Employee extends Compte {
 	private static final long serialVersionUID = 1L;
-	@Id 
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	
 	
 	@Column(name="poste_desiree")
 	private String poste_desiree   ;
@@ -41,19 +40,15 @@ public class Employee extends Compte {
 	private String type_contrat   ;
 	@Column(name="datedebut")
 	private Date datedebut  ;
-	@Column(name="salaire")
-	private Long salaire ;
+	
 	@Column(name="salaire_par_jour")
 	private Long salaire_jour ;
-	@Column(name="img")
-	private String avatar;
-	@Column(name="Administrateur")
+	
+	
 	@ManyToOne
 	private Administrateur administrateur;
-	@Column(name="Superviseur")
 	@ManyToOne
 	private Chef_equipe chef_equipe;
-	@Column(name="client")
 	@ManyToOne
 	private Client client;
 	

@@ -21,6 +21,7 @@ import lombok.NoArgsConstructor;
 public abstract class Compte implements Serializable  {
 	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id ;
 	@Column(name="login")
 	private String login  ;
 	@Column(name="mdp")
@@ -37,4 +38,8 @@ public abstract class Compte implements Serializable  {
 	private String email  ;
 	@Column(name="tel")
 	private Long tel   ;
+	@Column(name="img")
+	private String avatar;
+	@Column(name="salaire")
+	private Long salaire ;
 }

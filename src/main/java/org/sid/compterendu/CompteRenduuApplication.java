@@ -1,4 +1,4 @@
-package org.sid.CompteRenduu;
+package org.sid.compterendu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

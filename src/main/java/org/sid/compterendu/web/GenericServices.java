@@ -1,4 +1,4 @@
-package org.sid.CompteRenduu.web;
+package org.sid.compterendu.web;
 
 import java.io.Serializable;
 import java.util.List;

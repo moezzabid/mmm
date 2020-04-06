@@ -10,11 +10,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import org.sid.compterendu.entity.Projet;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -27,20 +29,18 @@ import lombok.NoArgsConstructor;
 @Data @AllArgsConstructor @NoArgsConstructor
 public class Chef_equipe extends Compte{
 	private static final long serialVersionUID = 1L;
-	@Id 
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	
 	
-	@Column(name="salaire")
-	private Long salaire ;
-	@Column(name="img")
-	private String avatar;
-	@Column(name="Administrateur")
-	@ManyToOne
-	private Administrateur administrateur;
-	@Column(name="Superviseur")
-	@OneToMany (mappedBy="Administrateur")
-	private Collection <Client>client ;
+	
+	
+	
+	@Column(name="projet")
+	@OneToMany
+	private Collection <Projet> projett ;
+	
+	
+	
+	
 	
 	
 }
