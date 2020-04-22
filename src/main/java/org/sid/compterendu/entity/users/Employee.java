@@ -12,8 +12,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+
+import org.sid.compterendu.entity.Tache;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
@@ -51,7 +54,8 @@ public class Employee extends Compte {
 	private Chef_equipe chef_equipe;
 	@ManyToOne
 	private Client client;
-	
+	@OneToOne
+	private Tache tache ;
 
 	
 
